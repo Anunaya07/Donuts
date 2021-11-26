@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}
+    donuts
+{% endblock title %}
+
+{% block body %}
+
+
+<div class="container my-4">
+    
+    <form action="/donuts" method="POST">
+        <div class="mb-3 mx-4 form-components" style="float: left;"> 
+            <!-- <label for="formGroupExampleInput" style="text-align:left;">Select Your Vehicle </label> -->
+            <select class="form-select" name="subjects" aria-placeholder="subject Type" aria-label="Default select example" style="width: 1000px;">
+
+                <option selected="selected" disabled="disabled">Select subject</option> 
+                <option value="math" name="subjects">Math</option>
+                <option value="english" name="subjects">English</option>
+                <option value="science" name="subjects">Science</option>
+                <option value="sst" name="subjects">SST</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-outline-light">Submit</button>
+
+        </div>
+      </form>
+
+</div>
+
+{% if flag==0 %}
+    
+{% else %}
+<center><img src='data:image/png;base64,{{data}}' style="margin:auto;border: 5px solid #000000"/></center>
+    
+{% endif %}
+
+
+    
+{% endblock body %}
