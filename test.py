@@ -16,6 +16,6 @@ for i in [[7,8,4,5],[10,8,5,6]]:
      plt.savefig(buf, format="png") 
      plt.show()
      data = base64.b64encode(buf.getbuffer()).decode("ascii")
-    #  print(data)
+     # print(data)
      buf.flush()
      buf.seek(0)
